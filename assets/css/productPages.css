@@ -4,7 +4,7 @@
 }
 
 .features-section {
-    background-color: rgba(255, 140, 66, 0.1);
+    background-color: rgba(54, 92, 144, 0.1);
     padding: 120px 0;
 }
 
@@ -24,7 +24,7 @@
     top: 0;
     font-size: 24px;
     font-weight: bold;
-    color: #ff6f00;
+    color: #002c60;
 }
 
 .feature-item p {
@@ -47,7 +47,7 @@
 }
 
 .benefits-section{
-    background-color: rgba(255, 140, 66, 0.1);;
+    background-color: rgba(54, 92, 144, 0.1);;
 }
 
 .benefits-section .benefit-box {
@@ -97,6 +97,6 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: #ff5e14;
+    color: #002c60;
 }
 

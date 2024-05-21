@@ -52,7 +52,7 @@ button:focus,
 }
 
 a:hover {
-  color: #ff8c42;
+  color: #002c60;
 }
 
 a {
@@ -241,7 +241,7 @@ p {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   border: none;
-  background: #ff8c42;
+  background: #002c60;
   overflow: hidden;
 }
 
@@ -250,9 +250,9 @@ p {
 }
 
 .main-btn.border-btn {
-  border: 2px solid #ff8c42;
+  border: 2px solid #002c60;
   background: transparent;
-  color: #ff8c42;
+  color: #002c60;
 }
 
 .btn-hover {
@@ -285,7 +285,7 @@ p {
 .scroll-top {
   width: 45px;
   height: 45px;
-  background: #ff8c42;
+  background: #002c60;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,7 +312,7 @@ p {
 .scroll-top:hover {
   color: #fff;
   /* background: rgba(88, 100, 255, 0.8); */
-  background: #ff8c42;
+  background: #002c60;
 }
 
 @keyframes animation1 {
@@ -434,7 +434,7 @@ p {
   height: 100%;
   border-style: solid;
   /* Spinner Color */
-  border-color: #ff8c42 #ff8c42 #ddd;
+  border-color: #002c60 #002c60 #ddd;
   border-radius: 50%;
   border-width: 6px;
 }
@@ -881,8 +881,8 @@ p {
   height: 40px;
   border-radius: 50%;
   background: #fff;
-  border: 3px solid #ff8c42;
-  color: #ff8c42;
+  border: 3px solid #002c60;
+  color: #002c60;
   left: 15px;
   bottom: 0;
   z-index: 9;
@@ -965,8 +965,8 @@ p {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  background: rgba(255, 140, 66, 0.1);
-  color: #ff8c42;
+  background: rgba(54, 92, 144, 0.1);
+  color: #002c60;
   margin: auto;
   margin-bottom: 30px;
   font-size: 65px;
@@ -1051,7 +1051,7 @@ p {
 }
 
 .box-style .content a.main-btn.border-btn:hover {
-  color: #ff8c42;
+  color: #002c60;
 }
 
 .box-style .content a.main-btn.border-btn:hover::after {
@@ -1071,15 +1071,15 @@ p {
 }
 
 .box-style.color-2 {
-  border-color: #ff8c42;
+  border-color: #002c60;
 }
 
 .box-style.color-2 .icon {
-  color: #ff8c42;
+  color: #002c60;
 }
 
 .box-style.color-2 .content a:hover {
-  color: #ff8c42;
+  color: #002c60;
 }
 
 .box-style.color-2 .content .main-btn:hover {
@@ -1244,7 +1244,7 @@ p {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #ff8c42;
+  background: #002c60;
   position: absolute;
   left: 0;
   top: 6.5px;
@@ -1255,7 +1255,7 @@ p {
 /* ====== feature-extended css ====== */
 .feature-extended-section .feature-extended-wrapper {
   padding: 70px 0;
-  background: rgba(255, 140, 66, 0.1);
+  background: rgba(54, 92, 144, 0.1);
 }
 
 .feature-extended-section .single-feature-extended {
@@ -1278,7 +1278,7 @@ p {
   font-size: 65px;
   line-height: 1;
   margin-bottom: 30px;
-  color: #ff8c42;
+  color: #002c60;
 }
 
 .feature-extended-section .single-feature-extended .content h3 {
@@ -1390,7 +1390,7 @@ p {
     position: static;
     margin-top: 20px;
     background: #fff;
-    color: #ff8c42;
+    color: #002c60;
     padding: 17.5px 35px;
   }
 }
@@ -1400,7 +1400,7 @@ p {
     position: absolute;
     margin-top: 0px;
     color: #fff;
-    background: #ff8c42;
+    background: #002c60;
     padding: 17.5px 25px;
   }
 }
@@ -1423,7 +1423,7 @@ p {
 @media (max-width: 767px) {
   .footer {
     padding-top: 120px;
-    background: #ff8c42;
+    background: #002c60;
   }
 }
 
@@ -1469,7 +1469,7 @@ p {
 }
 
 .footer .widget-wrapper .footer-widget .socials li a:hover {
-  color: #ff8c42;
+  color: #002c60;
   background: #fff;
 }
 
@@ -2217,7 +2217,7 @@ p {
 
 .clients-section {
   padding: 100px 0;
-  background: rgba(255, 140, 66, 0.1);
+  background: rgba(54, 92, 144, 0.1);
 }
 
 .clients-slider .swiper-slide {
@@ -2261,11 +2261,11 @@ p {
 }
 
 .swiper-pagination .swiper-pagination-bullet {
-  background-color: #ff8c42; /* Change the color of the pagination bullets */
+  background-color: #002c60; /* Change the color of the pagination bullets */
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ff8c42; /* Ensure active bullets are also orange */
+  background-color: #002c60; /* Ensure active bullets are also orange */
 }
 
 
@@ -2310,7 +2310,7 @@ p {
 /* ======== FAQ Section ======== */
 .faq-section {
   padding: 120px 0;
-  background-color: rgba(255, 140, 66, 0.1);
+  background-color: rgba(54, 92, 144, 0.1);
 }
 
 .accordion-item {
@@ -2336,7 +2336,7 @@ p {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #ff8c42;
+  background-color: #002c60;
   color: #fff;
 }
 
@@ -2390,7 +2390,7 @@ p {
 /* ======== Before-After Section ======== */
 .before-after-section {
   padding: 120px 0;
-  background-color: rgba(255, 140, 66, 0.1);
+  background-color: rgba(54, 92, 144, 0.1);
 }
 
 .before-after-header {
