@@ -32,92 +32,10 @@
       </p>
     <![endif] -->
 
-    <!-- ======== preloader start ======== -->
-    <div class="preloader">
-      <div class="loader">
-        <div class="spinner">
-          <div class="spinner-container">
-            <div class="spinner-rotator">
-              <div class="spinner-left">
-                <div class="spinner-circle"></div>
-              </div>
-              <div class="spinner-right">
-                <div class="spinner-circle"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- preloader end -->
+    <? include 'preloader.php'; ?>
 
-    <!-- ======== header start ======== -->
-    <header class="header">
-      <div class="navbar-area">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html">
-                  <img src="assets/img/logo/logo.svg" alt="Logo" />
-                </a>
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="toggler-icon"></span>
-                  <span class="toggler-icon"></span>
-                  <span class="toggler-icon"></span>
-                </button>
+    <?php include 'components/header.php';?>
 
-                <div
-                  class="collapse navbar-collapse sub-menu-bar"
-                  id="navbarSupportedContent"
-                >
-                  <ul id="nav" class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                      <a class="page-scroll active" href="#home">Home</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                      <a class="page-scroll" href="#features">Features</a>
-                    </li> -->
-                    <li class="nav-item">
-                      <a class="page-scroll" href="#clients">Clients</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="page-scroll" href="#about">Products</a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="page-scroll" href="#why">Why CNB</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#contact">Contact Us</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                      <a href="javascript:void(0)">Clients</a>
-                    </li> -->
-                  </ul>
-                </div>
-                <!-- navbar collapse -->
-              </nav>
-              <!-- navbar -->
-            </div>
-          </div>
-          <!-- row -->
-        </div>
-        <!-- container -->
-      </div>
-      <!-- navbar area -->
-    </header>
-    <!-- ======== header end ======== -->
-
-    <!-- ======== hero-section start ======== -->
     <section id="home" class="hero-section">
       <div class="container">
         <div class="swiper hero-swiper">
@@ -136,7 +54,7 @@
                       seamless yard management with SmartYard™.
                     </p>
                     <a
-                      href="smartyard.html"
+                      href="smartyard.php"
                       class="main-btn border-btn btn-hover wow fadeInUp"
                       data-wow-delay=".6s"
                       >Know More</a
@@ -171,7 +89,7 @@
                       ambient parameters.
                     </p>
                     <a
-                      href="smart-transport.html"
+                      href="smart-transport.php"
                       class="main-btn border-btn btn-hover wow fadeInUp"
                       data-wow-delay=".6s"
                       >Know More</a
@@ -208,7 +126,7 @@
                       free of cost.
                     </p>
                     <a
-                      href="ihawk.html"
+                      href="ihawk.php"
                       class="main-btn border-btn btn-hover wow fadeInUp"
                       data-wow-delay=".6s"
                       >Know More</a
@@ -243,7 +161,7 @@
                       and generates tasks for yard equipment and cranes..
                     </p>
                     <a
-                      href="hawk-e.html"
+                      href="hawk-e.php"
                       class="main-btn border-btn btn-hover wow fadeInUp"
                       data-wow-delay=".6s"
                       >Know More</a
@@ -273,9 +191,7 @@
         </div>
       </div>
     </section>
-    <!-- ======== hero-section end ======== -->
 
-    <!-- ======== feature-section start ======== -->
     <section
       id="features"
       class="feature-section pt-120 wow fadeInUp"
@@ -319,9 +235,7 @@
         </div>
       </div>
     </section>
-    <!-- ======== feature-section end ======== -->
 
-    <!-- ======== Our Clients Section Start ======== -->
     <br /><br /><br /><br />
     <section
       id="clients"
@@ -449,8 +363,6 @@
       </div>
     </section>
 
-    <!-- ======== Our Clients Section End ======== -->
-
     <!-- ======== about-section start ======== -->
     <section
       id="about"
@@ -504,7 +416,7 @@
                 <li>Gate Automation and Yard Planning</li>
               </ul>
               <a
-                href="smartyard.html"
+                href="smartyard.php"
                 class="main-btn btn-hover border-btn wow fadeInUp"
                 data-wow-delay=".6s"
                 >Discover More</a
@@ -544,7 +456,7 @@
                 <li>Maximized Occupancy and Reduced Costs</li>
               </ul>
               <a
-                href="smart-transport.html"
+                href="smart-transport.php"
                 class="main-btn btn-hover border-btn wow fadeInUp"
                 data-wow-delay=".6s"
                 >Discover More</a
@@ -553,7 +465,11 @@
           </div>
           <div class="col-xl-6 col-lg-6 order-first order-lg-last">
             <div class="about-img-2">
-              <img src="assets/img/about/about-2.png" alt class="w-100" />
+              <img
+                src="assets/img/hawkE/dynamic-yard-trailer-eta.webp"
+                alt
+                class="w-100"
+              />
               <img
                 src="assets/img/about/about-right-shape.svg"
                 alt
@@ -581,11 +497,9 @@
           <div class="col-xl-6 col-lg-6">
             <div class="about-img">
               <img
-                src="assets/img/about/smartYard.svg"
+                src="assets/img/hawkE/digital-supply-chain-dynamic-yard.webp"
                 alt
                 class="w-100"
-                width="635"
-                height="422"
               />
               <img
                 src="assets/img/about/about-left-shape.svg"
@@ -602,22 +516,26 @@
             <div class="about-content">
               <div class="section-title mb-30">
                 <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
-                  SmartYard™
+                  Hawk - Enterprise
                 </h2>
                 <p class="wow fadeInUp" data-wow-delay=".4s">
-                  SmartYard™ is your comprehensive solution for optimizing yard
-                  operations, enhancing productivity, and maximizing efficiency.
-                  Say goodbye to congestion and hello to seamless yard
-                  management with SmartYard™.
+                  Hawk-E (Enterprise) is an IoT platform using artificial
+                  intelligence and advanced sensors, primarily designed for
+                  enterprises that are looking for complete automation with
+                  extensive yard planning. It provides a high degree of
+                  locational accuracy (to 0.5 m) in tracking movement of
+                  containers. Apart from providing locational data, Hawk-E also
+                  undertakes yard planning and automatically generates tasks for
+                  yard equipment/cranes.
                 </p>
               </div>
-              <ul>
+              <!-- <ul>
                 <li>Fully Automated AI-Based Solution</li>
                 <li>Container Tracking and Inventory Management</li>
                 <li>Gate Automation and Yard Planning</li>
-              </ul>
+              </ul> -->
               <a
-                href="smartyard.html"
+                href="hawk-e.php"
                 class="main-btn btn-hover border-btn wow fadeInUp"
                 data-wow-delay=".6s"
                 >Discover More</a
@@ -637,7 +555,6 @@
     >
       <div class="container">
         <div class="row align-items-center">
-          
           <div class="col-xl-6 col-lg-6">
             <div class="about-content">
               <div class="section-title mb-30">
@@ -682,7 +599,7 @@
               </div>
               <br />
               <a
-                href="ihawk.html"
+                href="ihawk.php"
                 class="main-btn btn-hover border-btn wow fadeInUp"
                 data-wow-delay=".6s"
                 >Discover More</a
@@ -713,7 +630,6 @@
     </section>
     <!-- ======== about-section end 4 ======== -->
 
-    <!-- ======== feature-section start ======== -->
     <section
       id="why"
       class="feature-extended-section pt-100 wow fadeInUp"
@@ -819,128 +735,10 @@
         </div>
       </div>
     </section>
-    <!-- ======== feature-section end ======== -->
 
-    <!-- ======== subscribe-section start ======== -->
-    <section
-      id="contact"
-      class="subscribe-section pt-120 wow fadeInUp"
-      data-wow-delay=".4s"
-    >
-      <div class="container">
-        <div class="subscribe-wrapper img-bg">
-          <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-7">
-              <div class="section-title mb-15">
-                <h2 class="text-white mb-25">Contact Us</h2>
-                <p class="text-white pr-5">
-                  Drop your email id, and our team will be in touch with you
-                  shortly. We're excited to connect and assist you on your
-                  journey!
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-5">
-              <form action="#" class="subscribe-form">
-                <input
-                  type="email"
-                  name="subs-email"
-                  id="subs-email"
-                  placeholder="Your Email"
-                />
-                <button type="submit" class="main-btn btn-hover">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ======== subscribe-section end ======== -->
+    <?php include 'components/contact-us-form.php' ?>
 
-    <!-- ======== footer start ======== -->
-    <footer class="footer">
-      <div class="container">
-        <div class="widget-wrapper">
-          <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="footer-widget">
-                <div class="logo mb-30">
-                  <a href="index.html">
-                    <img src="assets/img/logo/logo.svg" alt />
-                  </a>
-                </div>
-                <p class="desc mb-30 text-white">Creative. Novel. Bold</p>
-                <ul class="socials">
-                  <li>
-                    <a href="jvascript:void(0)">
-                      <i class="lni lni-facebook-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="jvascript:void(0)">
-                      <i class="lni lni-twitter-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="jvascript:void(0)">
-                      <i class="lni lni-instagram-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="jvascript:void(0)">
-                      <i class="lni lni-linkedin-original"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-6">
-              <div class="footer-widget">
-                <h3>About Us</h3>
-                <ul class="links">
-                  <li><a href="javascript:void(0)">Home</a></li>
-                  <li><a href="javascript:void(0)">Feature</a></li>
-                  <li><a href="javascript:void(0)">About</a></li>
-                  <li><a href="javascript:void(0)">Testimonials</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6">
-              <div class="footer-widget">
-                <h3>Features</h3>
-                <ul class="links">
-                  <li><a href="javascript:void(0)">How it works</a></li>
-                  <li><a href="javascript:void(0)">Privacy policy</a></li>
-                  <li><a href="javascript:void(0)">Terms of service</a></li>
-                  <li><a href="javascript:void(0)">Refund policy</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6">
-              <div class="footer-widget">
-                <h3>Other Products</h3>
-                <ul class="links">
-                  <li><a href="jvascript:void(0)">Accounting Software</a></li>
-                  <li><a href="jvascript:void(0)">Billing Software</a></li>
-                  <li><a href="jvascript:void(0)">Booking System</a></li>
-                  <li><a href="jvascript:void(0)">Tracking System</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div
-              class="copyrights"
-              style="text-align: center; color: #fff"
-            ></div>
-            <br /><br />
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- ======== footer end ======== -->
+    <?php include 'components/footer.php' ?>
 
     <!-- ======== scroll-top ======== -->
     <a href="#" class="scroll-top btn-hover">

@@ -167,9 +167,82 @@ const setFooterDate = ()=>{
   
 }
 
+document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+  e.preventDefault(); 
+  openModal(e); 
+});
+
+function openModal(event) {
+  event.preventDefault();
+  const email = document.getElementById('subs-email').value;
+  document.getElementById('modal-email').value = email;
+  document.getElementById('contactModal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('contactModal').style.display = 'none';
+}
+
+function submitForm(event) {
+  event.preventDefault();
+
+  const submitButton = document.querySelector('#contact-form button');
+  const buttonText = submitButton.querySelector('span:not(.spinner)');
+  const spinner = submitButton.querySelector('.spinner');
+  const messageDiv = document.getElementById('message');
+
+  if (buttonText) {
+    buttonText.style.display = 'none';
+  }
+  if (spinner) {
+    spinner.style.display = 'inline-block';
+  }
+  submitButton.disabled = true;
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('modal-email').value;
+  const comments = document.getElementById('comments').value;
+
+  fetch('contact-us.php', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+          'name': name,
+          'modal-email': email,
+          'comments': comments
+      })
+  })
+  .then(response => response.text().then(text => ({ text, ok: response.ok })))
+  .then(({ text, ok }) => {
+      messageDiv.innerHTML = '<p class="text-white">' + text + '</p>';
+
+      // Clear the forms if submission is successful
+      if (ok) {
+          document.getElementById('contact-form').reset();
+          document.getElementById('subscribe-form').reset();
+          closeModal();
+      }
+  })
+  .catch(error => {
+      messageDiv.innerHTML = '<p class="text-white">An error occurred. Please try again later.</p>';
+  })
+  .finally(() => {
+      
+      if (buttonText) {
+        buttonText.style.display = 'inline';
+      }
+      if (spinner) {
+        spinner.style.display = 'none';
+      }
+      submitButton.disabled = false;
+  });
+}
 
 
-
-// ScrollReveal({ reset: true });
-// ScrollReveal().reveal('section', { delay: 500, distance: '50px', origin: 'bottom', opacity: 0 })
-// ScrollReveal().reveal('.lni', {delay:200,distance: '10px',origin:'bottom',opacity: 0});
+window.onclick = function(event) {
+  if (event.target == document.getElementById('contactModal')) {
+    closeModal();
+  }
+}

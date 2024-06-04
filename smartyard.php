@@ -18,50 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <!-- ======== header start ======== -->
-    <header class="header">
-        <div class="navbar-area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/img/logo/logo.svg" alt="Logo" />
-                            </a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a href="index.html#home">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="index.html#clients">Clients</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a  href="index.html#about">Products</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a  href="index.html#why">Why CNB</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a  href="index.html#contact">Contact Us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="active" href="product-smartyard.html">SmartYard™</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ======== header end ======== -->
+    <?php include 'components/header.php' ?>
 
     <!-- ======== hero-section start ======== -->
     <section class="hero-section pt-150">
@@ -277,89 +234,9 @@
         </div>
     </section>
     <!-- ======== faq-section end ======== -->
+    <?php include 'components/contact-us-form.php' ?>
 
-    <!-- ======== footer start ======== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="widget-wrapper">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="footer-widget">
-                            <div class="logo mb-30">
-                                <a href="index.html">
-                                    <img src="assets/img/logo/logo.svg" alt />
-                                </a>
-                            </div>
-                            <p class="desc mb-30 text-white">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt.
-                            </p>
-                            <ul class="socials">
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i class="lni lni-facebook-filled"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i class="lni lni-twitter-filled"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i class="lni lni-instagram-filled"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i class="lni lni-linkedin-original"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-2 col-lg-2 col-md-6">
-                        <div class="footer-widget">
-                            <h3>About Us</h3>
-                            <ul class="links">
-                                <li><a href="javascript:void(0)">Home</a></li>
-                                <li><a href="javascript:void(0)">Feature</a></li>
-                                <li><a href="javascript:void(0)">About</a></li>
-                                <li><a href="javascript:void(0)">Testimonials</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h3>Features</h3>
-                            <ul class="links">
-                                <li><a href="javascript:void(0)">How it works</a></li>
-                                <li><a href="javascript:void(0)">Privacy policy</a></li>
-                                <li><a href="javascript:void(0)">Terms of service</a></li>
-                                <li><a href="javascript:void(0)">Refund policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h3>Other Products</h3>
-                            <ul class="links">
-                                <li><a href="javascript:void(0)">Accounting Software</a></li>
-                                <li><a href="javascript:void(0)">Billing Software</a></li>
-                                <li><a href="javascript:void(0)">Booking System</a></li>
-                                <li><a href="javascript:void(0)">Tracking System</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="copyrights" style="text-align: center;color: #fff;"></div><br><br>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ======== footer end ======== -->
+    <?php include 'components/footer.php'?>
 
     <!-- ======== scroll-top ======== -->
     <a href="#" class="scroll-top btn-hover">
