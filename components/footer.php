@@ -10,7 +10,7 @@
                   </a>
                 </div>
                 <p class="desc mb-30 text-white">Creative. Novel. Bold</p>
-                <ul class="socials">
+                <!-- <ul class="socials">
                   <li>
                     <a href="jvascript:void(0)">
                       <i class="lni lni-facebook-filled"></i>
@@ -31,42 +31,43 @@
                       <i class="lni lni-linkedin-original"></i>
                     </a>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
 
             <div class="col-xl-2 col-lg-2 col-md-6">
               <div class="footer-widget">
-                <h3>About Us</h3>
+                <h3>Company</h3>
                 <ul class="links">
-                  <li><a href="javascript:void(0)">Home</a></li>
-                  <li><a href="javascript:void(0)">Feature</a></li>
-                  <li><a href="javascript:void(0)">About</a></li>
-                  <li><a href="javascript:void(0)">Testimonials</a></li>
+                  <!-- <li><a href="index.php#home">Home</a></li> -->
+                  <li><a href="index.php#clients">Clients</a></li>
+                  <li><a href="index.php#about">Products</a></li>
+                  <li><a href="index.php#why">Why CNB</a></li>
+                  <li><a href="index.php#contact">Contact Us</a></li>
                 </ul>
               </div>
             </div>
 
             <div class="col-xl-3 col-lg-3 col-md-6">
               <div class="footer-widget">
-                <h3>Features</h3>
+                <h3>Resources</h3>
                 <ul class="links">
-                  <li><a href="javascript:void(0)">How it works</a></li>
+                  <!-- <li><a href="javascript:void(0)">How it works</a></li>
                   <li><a href="javascript:void(0)">Privacy policy</a></li>
                   <li><a href="javascript:void(0)">Terms of service</a></li>
-                  <li><a href="javascript:void(0)">Refund policy</a></li>
+                  <li><a href="javascript:void(0)">Refund policy</a></li> -->
                 </ul>
               </div>
             </div>
 
             <div class="col-xl-3 col-lg-3 col-md-6">
               <div class="footer-widget">
-                <h3>Other Products</h3>
+                <h3>Our Products</h3>
                 <ul class="links">
-                  <li><a href="jvascript:void(0)">Accounting Software</a></li>
-                  <li><a href="jvascript:void(0)">Billing Software</a></li>
-                  <li><a href="jvascript:void(0)">Booking System</a></li>
-                  <li><a href="jvascript:void(0)">Tracking System</a></li>
+                  <li><a href="smartyard.php">SmartYard</a></li>
+                  <li><a href="smart-transport.php">SmartTransport</a></li>
+                  <li><a href="hawk-e.php">Hawk - Enterprise</a></li>
+                  <li><a href="ihawk.php">iHawk</a></li>
                 </ul>
               </div>
             </div>

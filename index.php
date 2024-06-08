@@ -12,8 +12,6 @@
       href="assets/img/favicon.png"
     />
     <!-- Place favicon.ico in the root directory -->
-
-    <!-- ======== CSS here ======== -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/lineicons.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
@@ -32,7 +30,7 @@
       </p>
     <![endif] -->
 
-    <? include 'preloader.php'; ?>
+    <? include 'components/preloader.php'; ?>
 
     <?php include 'components/header.php';?>
 
@@ -363,7 +361,6 @@
       </div>
     </section>
 
-    <!-- ======== about-section start ======== -->
     <section
       id="about"
       class="about-section pt-150 wow fadeInUp"
@@ -426,9 +423,8 @@
         </div>
       </div>
     </section>
-    <!-- ======== about-section end ======== -->
+  
 
-    <!-- ======== about2-section start ======== -->
     <section
       id="about"
       class="about-section pt-150 wow fadeInUp"
@@ -484,9 +480,7 @@
         </div>
       </div>
     </section>
-    <!-- ======== about2-section end ======== -->
 
-    <!-- ======== about-section-3 start ======== -->
     <section
       id="about"
       class="about-section pt-150 wow fadeInUp"
@@ -545,9 +539,7 @@
         </div>
       </div>
     </section>
-    <!-- ======== about-section-3 end ======== -->
 
-    <!-- ======== about-section start 4 ======== -->
     <section
       id="about"
       class="about-section pt-150 wow fadeInUp"
@@ -628,7 +620,7 @@
         </div>
       </div>
     </section>
-    <!-- ======== about-section end 4 ======== -->
+
 
     <section
       id="why"
@@ -740,12 +732,12 @@
 
     <?php include 'components/footer.php' ?>
 
-    <!-- ======== scroll-top ======== -->
+
     <a href="#" class="scroll-top btn-hover">
       <i class="lni lni-chevron-up"></i>
     </a>
 
-    <!-- ======== JS here ======== -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>

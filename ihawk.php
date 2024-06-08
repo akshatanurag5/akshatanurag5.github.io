@@ -13,7 +13,6 @@
 <body>
     <?php include 'components/header.php'?>
 
-    <!-- ======== hero-section start ======== -->
     <section class="hero-section pt-150">
         <div class="container">
             <div class="row align-items-center">
@@ -32,9 +31,7 @@
             </div>
         </div>
     </section>
-    <!-- ======== hero-section end ======== -->
 
-    <!-- ======== features-section start ======== -->
     <section class="features-section pt-120">
         <div class="container">
             <div class="text-center mb-60">
@@ -83,10 +80,7 @@
             </div>
         </div>
     </section>
-    
-    <!-- ======== features-section end ======== -->
 
-    <!-- ======== advantages-section start ======== -->
     <section class="product-details-section pt-120">
         <div class="container">
             <div class="text-center mb-60">
@@ -164,17 +158,17 @@
         </div>
     </section>
     
-    <!-- ======== advantages-section end ======== -->
+    
     <?php include 'components/contact-us-form.php' ?>
 
     <?php include 'components/footer.php' ?>
 
-    <!-- ======== scroll-top ======== -->
+    
     <a href="#" class="scroll-top btn-hover">
         <i class="lni lni-chevron-up"></i>
     </a>
 
-<!-- ======== JS here ======== -->
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>

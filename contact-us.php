@@ -29,8 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Port = 587;
 
             //Recipients
-            $mail->setFrom('landing-page@cnbtek.com', 'Mailer');
-            $mail->addAddress('akshat@cnbtek.com'); // Add a recipient
+            $mail->setFrom('landing-page@cnbtek.com', 'cnbtek.com');
+            $mail->addAddress('nitin@cnbtek.com');
+            $mail->addAddress('vinay@cnbtek.com');
+            $mail->addAddress('akshat+test@cnbtek.com'); // Add a recipient
 
             // Content
             $mail->isHTML(true);
@@ -41,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->send();
             echo 'Thank you! Our team will be in touch with you shortly.';
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            echo "Message could not be sent.";
         }
     } else {
         echo "Invalid email address. Please enter a valid email.";
