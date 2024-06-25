@@ -31,8 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //Recipients
             $mail->setFrom('landing-page@cnbtek.com', 'cnbtek.com');
             $mail->addAddress('nitin@cnbtek.com');
+            $mail->addAddress('rajesh@cnbtek.com');
+            $mail->addAddress('abhishek@cnbtek.com');
+            $mail->addAddress('manish@cnbtek.com');
             $mail->addAddress('vinay@cnbtek.com');
-            $mail->addAddress('akshat+test@cnbtek.com'); // Add a recipient
 
             // Content
             $mail->isHTML(true);
