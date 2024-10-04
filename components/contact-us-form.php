@@ -43,15 +43,21 @@
     <span class="close" onclick="closeModal()">&times;</span>
     <form id="contact-form" class="contact-form" onsubmit="submitForm(event)">
       <div class="form-group">
-        <label for="name">Name</label>
+        <label for="name">Name <span style="color: red;">*</span></label>
         <input type="text" id="name" name="name" required />
       </div>
       <div class="form-group">
-        <label for="modal-email">Email</label>
+        <label for="modal-email">Email <span style="color: red;">*</span></label>
         <input type="email" id="modal-email" name="modal-email" required />
       </div>
+        <div class="form-group">
+            <label for="mobile-number">Phone Number <span style="color: red;">*</span></label>
+            <input type="tel" id="mobile-number" name="mobile-number" required
+                   pattern="[0-9]{10}"
+                   inputmode="numeric"/>
+        </div>
       <div class="form-group">
-        <label for="comments">Comments</label>
+        <label for="comments">Comments <span style="color: red;">*</span></label>
         <textarea id="comments" name="comments" required></textarea>
       </div>
       <div class="form-actions">

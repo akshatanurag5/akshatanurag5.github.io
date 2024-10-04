@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['modal-email'], FILTER_SANITIZE_EMAIL);
     $comments = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
+    $mobileNumber = filter_var($_POST['mobile-number'], FILTER_SANITIZE_STRING);
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $mail = new PHPMailer(true);
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'developer@cnbtek.com'; // Your Gmail address
-            $mail->Password = ''; // Your Gmail password or App Password
+            $mail->Password = 'smarty@rd@cnb'; // Your Gmail password or App Password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
@@ -35,12 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->addAddress('abhishek@cnbtek.com');
             $mail->addAddress('manish@cnbtek.com');
             $mail->addAddress('vinay@cnbtek.com');
+//            $mail->addAddress("akshat@cnbtek.com");
 
             // Content
             $mail->isHTML(true);
             $mail->Subject = 'New Message From cnbtek.com';
-            $mail->Body    = "Name: $name<br>Email: $email<br>Comments: $comments";
-            $mail->AltBody = "Name: $name\nEmail: $email\nComments: $comments";
+            $mail->Body    = "Name: $name<br>Email: $email<br>Mobile Number: $mobileNumber<br>Comments: $comments";
+            $mail->AltBody = "Name: $name\nEmail: $email\nMobile Number: $mobileNumber\nComments: $comments";
 
             $mail->send();
             echo 'Thank you! Our team will be in touch with you shortly.';

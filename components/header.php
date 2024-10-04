@@ -42,6 +42,9 @@
                     <li class="nav-item">
                       <a class="" href="index.php#why">Why CNB</a>
                     </li>
+                      <li class="nav-item">
+                          <a href="contact-info.php">Contact Info</a>
+                      </li>
                     <li class="nav-item">
                       <a href="#contact">Contact Us</a>
                     </li>

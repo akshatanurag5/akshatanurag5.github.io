@@ -202,6 +202,7 @@ function submitForm(event) {
   const name = document.getElementById('name').value;
   const email = document.getElementById('modal-email').value;
   const comments = document.getElementById('comments').value;
+  const mobileNumber = document.getElementById('mobile-number').value;
 
   fetch('contact-us.php', {
       method: 'POST',
@@ -211,7 +212,8 @@ function submitForm(event) {
       body: new URLSearchParams({
           'name': name,
           'modal-email': email,
-          'comments': comments
+          'comments': comments,
+          'mobile-number': mobileNumber
       })
   })
   .then(response => response.text().then(text => ({ text, ok: response.ok })))
@@ -245,4 +247,148 @@ window.onclick = function(event) {
   if (event.target == document.getElementById('contactModal')) {
     closeModal();
   }
+}
+
+var map;
+var InforObj = [];
+var centerCords = {
+  lat: 33.052048,
+  lng: 42.807008
+};
+var markersOnMap = [{
+  placeName: "CNB Bengaluru",
+  placeAddress: "Enzyme Tech Park #1604, Ground Floor, 25th Main, 22nd Cross Rd, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
+  LatLng: [{
+    lat: 12.908719,
+    lng: 77.650972
+  }]
+},
+  {
+    placeName: "CNB Support (Delhi)",
+    placeAddress: "#106, sector 10C, near nagar nigam office, Vasundhara, Ghaziabad, UP - 201012",
+    LatLng: [{
+      lat: 28.680681,
+      lng: 77.378943
+    }]
+  },
+  {
+    placeName: "CNB Support (Nagpur)",
+    placeAddress: "Near Railway station Hanuman Mandir, ward no 6, ambedkar nagar (butibori), nagpur - 441108",
+    LatLng: [{
+      lat: 21.143985,
+      lng: 79.067578
+    }]
+  },
+  {
+    placeName: "CNB Support (Hazira, Gujurat)",
+    placeAddress: "#256(C), Star RO House, Mora, Surat, Gujurat - 394517",
+    LatLng: [{
+      lat: 21.167320,
+      lng: 72.680260
+    }]
+  },
+  {
+    placeName: "CNB Support (Mumbai)",
+    placeAddress: "#175 Barapada, Muslim Mohalla, Taluka Panvel, Barapada, Raigarh, Maharashtra - 410221",
+    LatLng: [{
+      lat: 18.856828,
+      lng: 73.092170
+    }]
+  },
+  {
+    placeName: "CNB Support (Mundra, Gujurat)",
+    placeAddress: "Vaibhav park, plot No. 42, anmol, mundra, kutch, Gujrat - 370421",
+    LatLng: [{
+      lat: 22.843511,
+      lng: 69.753043
+    }]
+  },
+  {
+    placeName: "CNB Support (Chennai)",
+    placeAddress: "#1/96, Bajanai Kovil Street, Vadaperumbakkam, Chennai - 600060",
+    LatLng: [{
+      lat: 13.063036,
+      lng: 80.224224
+    }]
+  },
+  {
+    placeName: "CNB Support (Kolkata)",
+    placeAddress: "Jinjira Bazar, Maya Bhawan, Bandal Road, Brace Bridge, Mahestala, West Bengal - 700088",
+    LatLng: [{
+      lat: 22.517615,
+      lng: 88.298157
+    }]
+  },
+  {
+    placeName: "CNB (Kuala Lumpur)",
+    placeAddress: "Level 6 & 7, Residensi Tribeca, No. 215, Jalan Imbi, Kuala Lumpur - 55100, Malaysia",
+    LatLng: [{
+      lat: 3.146641,
+      lng: 101.715725
+    }]
+  },
+  {
+    placeName: "CNB (United Kingdom)",
+    placeAddress: "Glenvale House, 57 Portchester Road, Fareham PO16 8AL, Hampshire United Kingdom",
+    LatLng: [{
+      lat: 50.849636,
+      lng: -1.147712
+    }]
+  }
+];
+
+window.onload = function () {
+  initMap();
+};
+
+function addMarker() {
+  for (var i = 0; i < markersOnMap.length; i++) {
+    var contentString = '<div id="content"><h6>' + markersOnMap[i].placeName +
+        '</h6><p>' + markersOnMap[i].placeAddress + '</p></div>';
+
+    const marker = new google.maps.Marker({
+      position: markersOnMap[i].LatLng[0],
+      map: map
+    });
+
+    const infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      maxWidth: 200
+    });
+
+    marker.addListener('click', function () {
+      closeOtherInfo();
+      infowindow.open(marker.get('map'), marker);
+      InforObj[0] = infowindow;
+    });
+    // marker.addListener('mouseover', function () {
+    //     closeOtherInfo();
+    //     infowindow.open(marker.get('map'), marker);
+    //     InforObj[0] = infowindow;
+    // });
+    // marker.addListener('mouseout', function () {
+    //     closeOtherInfo();
+    //     infowindow.close();
+    //     InforObj[0] = infowindow;
+    // });
+  }
+}
+
+function closeOtherInfo() {
+  if (InforObj.length > 0) {
+    /* detach the info-window from the marker ... undocumented in the API docs */
+    InforObj[0].set("marker", null);
+    /* and close it */
+    InforObj[0].close();
+    /* blank the array */
+    InforObj.length = 0;
+  }
+}
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 3,
+    center: centerCords
+  });
+  addMarker();
 }

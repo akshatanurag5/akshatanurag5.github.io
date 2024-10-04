@@ -30,7 +30,7 @@
       </p>
     <![endif] -->
 
-    <? include 'components/preloader.php'; ?>
+<!--    --><?// include 'components/preloader.php'; ?>
 
     <?php include 'components/header.php';?>
 
