@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="assets/css/swiper-bundle.min.css"
     />
   </head>
   <body>
@@ -43,7 +43,7 @@
                 <div class="col-lg-5">
                   <div class="hero-content">
                     <h1 class="wow fadeInUp" data-wow-delay=".4s">
-                      SmartYard™
+                      SmartYard 123
                     </h1>
                     <p class="wow fadeInUp" data-wow-delay=".6s">
                       SmartYard™ is your comprehensive solution for optimizing
@@ -738,7 +738,7 @@
     </a>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
