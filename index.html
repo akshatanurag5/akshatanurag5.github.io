@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNB Tek | AI-Powered Cargo Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, .display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+        .industry-card:hover .industry-overlay {
+            opacity: 1;
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <base target="_blank">
+</head>
+<body class="bg-slate-950 text-slate-100 overflow-x-hidden">
+
+<!-- Navigation -->
+<nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="container" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight">CNB<span class="text-blue-400">TEK</span></span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#solutions" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Solutions</a>
+                <a href="#how-it-works" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">How It Works</a>
+                <a href="#achievements" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Impact</a>
+                <a href="#industries" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Industries</a>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all hover:scale-105">
+                    Get Demo
+                </button>
+            </div>
+
+            <button class="md:hidden text-white" onclick="toggleMenu()">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
+        <div class="px-6 py-4 space-y-3">
+            <a href="#solutions" class="block text-slate-300 hover:text-white py-2">Solutions</a>
+            <a href="#how-it-works" class="block text-slate-300 hover:text-white py-2">How It Works</a>
+            <a href="#achievements" class="block text-slate-300 hover:text-white py-2">Impact</a>
+            <button class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg mt-4">Get Demo</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-gradient">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8 scroll-reveal">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
+                <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+                Next-Gen Cargo Intelligence
+            </div>
+
+            <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                Instilling <span class="gradient-text">Intelligence</span> in Cargo Handling
+            </h1>
+
+            <p class="text-xl text-slate-400 max-w-lg leading-relaxed">
+                Big Data and AI solutions that transform container yards, ports, and warehouses into autonomous, efficient ecosystems.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-medium transition-all hover:scale-105 flex items-center gap-2">
+                    Schedule Demo
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+                <button class="border border-slate-600 hover:border-slate-400 text-white px-8 py-4 rounded-full font-medium transition-all flex items-center gap-2">
+                    <i data-lucide="play-circle" class="w-5 h-5"></i>
+                    Watch Video
+                </button>
+            </div>
+
+            <div class="flex items-center gap-6 pt-4">
+                <div class="flex -space-x-3">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-slate-900" alt="Client">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-slate-900" alt="Client">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-slate-900" alt="Client">
+                </div>
+                <p class="text-sm text-slate-400">Trusted by <span class="text-white font-semibold">50+</span> global terminals</p>
+            </div>
+        </div>
+
+        <div class="relative scroll-reveal">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700/50">
+                <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&h=600&fit=crop" alt="Smart Container Yard" class="w-full h-auto">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+
+                <!-- Floating Stats Card -->
+                <div class="absolute bottom-6 left-6 right-6 glass-card rounded-xl p-4 backdrop-blur-md">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider">Yard Efficiency</p>
+                            <p class="text-2xl font-bold text-white">+47%</p>
+                        </div>
+                        <div class="h-12 w-px bg-slate-700"></div>
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider">Containers Tracked</p>
+                            <p class="text-2xl font-bold text-white">2.5M+</p>
+                        </div>
+                        <div class="h-12 w-px bg-slate-700"></div>
+                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
+                            <i data-lucide="trending-up" class="text-green-400 w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solutions Grid -->
+<section id="solutions" class="py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+            <h2 class="text-3xl lg:text-5xl font-bold mb-6">Intelligent Solutions for <span class="text-blue-400">Modern Logistics</span></h2>
+            <p class="text-slate-400 text-lg">End-to-end automation powered by IoT, AI, and real-time analytics</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Container Yards -->
+            <div class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:-translate-y-2 scroll-reveal">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop" alt="Container Yard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="container" class="text-blue-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Container Yards</h3>
+                    <p class="text-slate-400 mb-6">BigData and AI optimizing your yard operations with predictive placement and automated tracking.</p>
+                    <a href="#" class="inline-flex items-center text-blue-400 font-medium hover:text-blue-300 transition-colors">
+                        Learn more <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ports -->
+            <div class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:-translate-y-2 scroll-reveal" style="transition-delay: 100ms;">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&h=400&fit=crop" alt="Port Operations" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="ship" class="text-purple-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Port Operations</h3>
+                    <p class="text-slate-400 mb-6">Comprehensive IoT platform to manage vessel traffic, berth allocation, and cargo flow in real-time.</p>
+                    <a href="#" class="inline-flex items-center text-purple-400 font-medium hover:text-purple-300 transition-colors">
+                        Learn more <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Warehouses -->
+            <div class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-green-500/50 transition-all duration-300 hover:transform hover:-translate-y-2 scroll-reveal" style="transition-delay: 200ms;">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&h=400&fit=crop" alt="Warehouse" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="warehouse" class="text-green-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Smart Warehouses</h3>
+                    <p class="text-slate-400 mb-6">RTLS-powered monitoring for complete inventory visibility and automated warehouse management.</p>
+                    <a href="#" class="inline-flex items-center text-green-400 font-medium hover:text-green-300 transition-colors">
+                        Learn more <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section id="achievements" class="py-24 bg-slate-950 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%234f46e5%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="scroll-reveal">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">Proven Impact Across <span class="text-blue-400">Global Operations</span></h2>
+                <p class="text-slate-400 text-lg mb-8">Our AI-driven solutions have transformed logistics operations worldwide, delivering measurable ROI and operational excellence.</p>
+
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-1">
+                            <i data-lucide="check" class="text-blue-400 w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white">Increases effective storage capacity by up to 35%</h4>
+                            <p class="text-slate-400 text-sm">Smart stacking algorithms optimize space utilization</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-1">
+                            <i data-lucide="check" class="text-blue-400 w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white">Improves overall turn-around time by 40%</h4>
+                            <p class="text-slate-400 text-sm">Predictive analytics reduce waiting and handling times</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-1">
+                            <i data-lucide="check" class="text-blue-400 w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white">Seamlessly integrates with legacy systems</h4>
+                            <p class="text-slate-400 text-sm">API-first architecture ensures compatibility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 scroll-reveal">
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 text-center group hover:border-blue-500/50 transition-all">
+                    <div class="text-4xl lg:text-5xl font-bold text-blue-400 mb-2 counter" data-target="2500000">0</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Containers Annually</div>
+                </div>
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 text-center group hover:border-purple-500/50 transition-all mt-8">
+                    <div class="text-4xl lg:text-5xl font-bold text-purple-400 mb-2 counter" data-target="50">0</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Yards Automated</div>
+                </div>
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 text-center group hover:border-green-500/50 transition-all">
+                    <div class="text-4xl lg:text-5xl font-bold text-green-400 mb-2 counter" data-target="400">0</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Crane Installations</div>
+                </div>
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 text-center group hover:border-orange-500/50 transition-all mt-8">
+                    <div class="text-4xl lg:text-5xl font-bold text-orange-400 mb-2">99.9%</div>
+                    <div class="text-slate-400 text-sm uppercase tracking-wider">Uptime SLA</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section id="how-it-works" class="py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+            <h2 class="text-3xl lg:text-5xl font-bold mb-6">How We Transform Your <span class="text-blue-400">Operations</span></h2>
+            <p class="text-slate-400 text-lg">A four-step process from data capture to AI-driven optimization</p>
+        </div>
+
+        <div class="relative">
+            <!-- Connection Line -->
+            <div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 -translate-y-1/2"></div>
+
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="relative scroll-reveal">
+                    <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 h-full">
+                        <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-600/25">
+                            <i data-lucide="radio" class="text-white w-7 h-7"></i>
+                        </div>
+                        <div class="text-blue-400 font-bold text-sm mb-2">STEP 01</div>
+                        <h3 class="text-xl font-bold mb-3">Data Capture</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Hi-efficiency, non-intrusive sensors capture real-time container and equipment data across your facility.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative scroll-reveal" style="transition-delay: 100ms;">
+                    <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-300 h-full">
+                        <div class="w-14 h-14 bg-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-purple-600/25">
+                            <i data-lucide="cloud" class="text-white w-7 h-7"></i>
+                        </div>
+                        <div class="text-purple-400 font-bold text-sm mb-2">STEP 02</div>
+                        <h3 class="text-xl font-bold mb-3">Cloud Transfer</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Secure IoT network transmits data to cloud infrastructure with edge computing capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative scroll-reveal" style="transition-delay: 200ms;">
+                    <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-green-500/50 transition-all duration-300 h-full">
+                        <div class="w-14 h-14 bg-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-green-600/25">
+                            <i data-lucide="brain" class="text-white w-7 h-7"></i>
+                        </div>
+                        <div class="text-green-400 font-bold text-sm mb-2">STEP 03</div>
+                        <h3 class="text-xl font-bold mb-3">Big Data Analysis</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Advanced analytics process millions of data points to identify patterns and optimization opportunities.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative scroll-reveal" style="transition-delay: 300ms;">
+                    <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-orange-500/50 transition-all duration-300 h-full">
+                        <div class="w-14 h-14 bg-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-orange-600/25">
+                            <i data-lucide="cpu" class="text-white w-7 h-7"></i>
+                        </div>
+                        <div class="text-orange-400 font-bold text-sm mb-2">STEP 04</div>
+                        <h3 class="text-xl font-bold mb-3">AI Optimization</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Predictive algorithms generate real-time yard plans and automated decision recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- iHawk App Feature -->
+<section class="py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-3xl p-8 lg:p-16 border border-blue-500/20 overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center relative">
+                <div class="scroll-reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                        <i data-lucide="smartphone" class="w-4 h-4"></i>
+                        Mobile Application
+                    </div>
+                    <h2 class="text-3xl lg:text-5xl font-bold mb-6">iHAWK: <span class="text-blue-400">Connecting Cargo to Stakeholders</span></h2>
+                    <p class="text-slate-400 text-lg mb-8">Empowering CHAs, Importers, and Exporters with real-time container tracking and predictive ETAs.</p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="text-blue-400 w-5 h-5"></i>
+                            <span class="text-slate-300">Real-time container location tracking</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="activity" class="text-blue-400 w-5 h-5"></i>
+                            <span class="text-slate-300">Live process status updates</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="clock" class="text-blue-400 w-5 h-5"></i>
+                            <span class="text-slate-300">Expected completion time predictions</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="bell" class="text-blue-400 w-5 h-5"></i>
+                            <span class="text-slate-300">Instant notifications & alerts</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-white text-slate-900 px-6 py-3 rounded-xl font-medium hover:bg-slate-200 transition-colors flex items-center gap-2">
+                            <i data-lucide="apple" class="w-5 h-5"></i>
+                            App Store
+                        </button>
+                        <button class="bg-white text-slate-900 px-6 py-3 rounded-xl font-medium hover:bg-slate-200 transition-colors flex items-center gap-2">
+                            <i data-lucide="play" class="w-5 h-5"></i>
+                            Play Store
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative scroll-reveal">
+                    <div class="relative mx-auto w-72 h-[600px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl overflow-hidden">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-2xl"></div>
+                        <div class="h-full bg-slate-950 p-6 pt-12 overflow-y-auto">
+                            <div class="flex items-center justify-between mb-6">
+                                <div>
+                                    <p class="text-xs text-slate-500">Welcome back</p>
+                                    <p class="text-white font-semibold">John Doe</p>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                    <i data-lucide="user" class="text-blue-400 w-5 h-5"></i>
+                                </div>
+                            </div>
+
+                            <div class="bg-blue-600 rounded-2xl p-4 mb-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-blue-100 text-xs">Container #CNT-8842</span>
+                                    <span class="bg-green-400 text-green-900 text-xs px-2 py-0.5 rounded-full font-bold">Active</span>
+                                </div>
+                                <p class="text-white font-bold text-lg mb-1">In Transit</p>
+                                <p class="text-blue-100 text-xs">Arriving in 2h 34m</p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="bg-slate-900 rounded-xl p-3 border border-slate-800">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                                            <i data-lucide="package" class="text-purple-400 w-5 h-5"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="text-white text-sm font-medium">Customs Cleared</p>
+                                            <p class="text-slate-500 text-xs">2 hours ago</p>
+                                        </div>
+                                        <i data-lucide="check-circle" class="text-green-400 w-5 h-5"></i>
+                                    </div>
+                                </div>
+
+                                <div class="bg-slate-900 rounded-xl p-3 border border-slate-800">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                                            <i data-lucide="truck" class="text-orange-400 w-5 h-5"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="text-white text-sm font-medium">Gate Out</p>
+                                            <p class="text-slate-500 text-xs">Pending</p>
+                                        </div>
+                                        <div class="w-5 h-5 rounded-full border-2 border-slate-600"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clients Section -->
+<section class="py-24 bg-slate-900 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-12 scroll-reveal">
+            <h2 class="text-2xl font-bold text-slate-400 uppercase tracking-wider">Trusted by Industry Leaders</h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+            <div class="flex items-center justify-center h-16 bg-slate-800 rounded-lg px-4 hover:opacity-100 transition-opacity">
+                <span class="text-slate-300 font-bold text-lg">APM Terminals</span>
+            </div>
+            <div class="flex items-center justify-center h-16 bg-slate-800 rounded-lg px-4 hover:opacity-100 transition-opacity">
+                <span class="text-slate-300 font-bold text-lg">DP World</span>
+            </div>
+            <div class="flex items-center justify-center h-16 bg-slate-800 rounded-lg px-4 hover:opacity-100 transition-opacity">
+                <span class="text-slate-300 font-bold text-lg">PSA Intl</span>
+            </div>
+            <div class="flex items-center justify-center h-16 bg-slate-800 rounded-lg px-4 hover:opacity-100 transition-opacity">
+                <span class="text-slate-300 font-bold text-lg">Hutchison</span>
+            </div>
+            <div class="flex items-center justify-center h-16 bg-slate-800 rounded-lg px-4 hover:opacity-100 transition-opacity">
+                <span class="text-slate-300 font-bold text-lg">COSCO</span>
+            </div>
+            <div class="flex items-center justify-center h-16 bg-slate-800 rounded-lg px-4 hover:opacity-100 transition-opacity">
+                <span class="text-slate-300 font-bold text-lg">Adani Ports</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 bg-slate-950 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10"></div>
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative scroll-reveal">
+        <h2 class="text-4xl lg:text-6xl font-bold mb-6">Ready to Transform Your <span class="gradient-text">Yard Operations?</span></h2>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">Join 50+ automated yards worldwide. Schedule a personalized demo to see how CNB Tek can optimize your operations.</p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-medium text-lg transition-all hover:scale-105 shadow-lg shadow-blue-600/25">
+                Schedule Demo
+            </button>
+            <button class="border border-slate-600 hover:border-slate-400 text-white px-10 py-4 rounded-full font-medium text-lg transition-all">
+                Contact Sales
+            </button>
+        </div>
+
+        <p class="mt-8 text-slate-500 text-sm">Free consultation • No commitment • Implementation support</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="container" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl font-bold">CNB<span class="text-blue-400">TEK</span></span>
+                </div>
+                <p class="text-slate-400 mb-6 max-w-sm">Instilling intelligence in cargo handling through Big Data, AI, and IoT solutions for modern logistics operations.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-all">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-all">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 transition-all">
+                        <i data-lucide="youtube" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-white mb-4">Solutions</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">Container Yards</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">Port Operations</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">Smart Warehouses</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">iHawk App</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-white mb-4">Company</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">About Us</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">Case Studies</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">Careers</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-blue-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-500 text-sm">© 2024 CNB Tek. All rights reserved.</p>
+            <div class="flex gap-6 text-sm">
+                <a href="#" class="text-slate-500 hover:text-slate-300 transition-colors">Privacy Policy</a>
+                <a href="#" class="text-slate-500 hover:text-slate-300 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-slate-900/95', 'backdrop-blur-md', 'shadow-lg');
+        } else {
+            navbar.classList.remove('bg-slate-900/95', 'backdrop-blur-md', 'shadow-lg');
+        }
+    });
+
+    // Mobile menu toggle
+    function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    }
+
+    // Scroll reveal animation
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+
+                // Trigger counter animation if it's a counter
+                if (entry.target.querySelector('.counter')) {
+                    animateCounter(entry.target.querySelector('.counter'));
+                }
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
+
+    // Counter animation
+    function animateCounter(counter) {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target.toLocaleString() + (target > 1000 ? '+' : '');
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current).toLocaleString();
+            }
+        }, 16);
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
